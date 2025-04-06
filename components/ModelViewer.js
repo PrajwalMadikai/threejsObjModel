@@ -117,10 +117,9 @@ function MeasurementLine({ points }) {
 
 function Model({ url, textureUrl, onMeasurementUpdate }) {
     const [model, setModel] = useState(null);
-    const [error, setError] = useState(null);
     const [pointMarkers, setPointMarkers] = useState([]);
     const [linePoints, setLinePoints] = useState(null);
-    const { scene, camera, gl } = useThree();
+    const {  camera, gl } = useThree();
     const modelRef = useRef(null);
     const raycaster = useRef(new THREE.Raycaster());
     const clickedPoints = useRef([]);
